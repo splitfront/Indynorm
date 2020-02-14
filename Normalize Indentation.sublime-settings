@@ -1,4 +1,5 @@
 {
     "convert_on_open": false,
-    "convert_on_activate": false
+    "convert_on_activate": false,
+    "debug_mode" : true
 }
