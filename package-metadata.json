@@ -1,5 +1,5 @@
 {
-    "description": "A Sublime Text plugin to normalize identation for a file.", 
+    "description": "THE Sublime Text plugin to normalize identation for a file.", 
     "version": "1.0.3", 
     "url": "https://github.com/Ennosuke/Normalize-Indentation", 
     "dependencies": [
