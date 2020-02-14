@@ -4,8 +4,8 @@
         "children":
         [
             {
-                "caption": "Normalize Indentation",
-                "command": "normalize_indentation",
+                "caption": "Indynorm",
+                "command": "indynorm",
             }
         ]
     },
@@ -22,20 +22,20 @@
                 "children":
                 [
                     {
-                        "caption": "Normalize Indentation",
+                        "caption": "Indynorm",
                         "children":
                         [
                             {
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/Normalize Indentation/Normalize Indentation.sublime-settings"
+                                    "file": "${packages}/Indynorm/Indynorm.sublime-settings"
                                 },
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/User/Normalize Indentation.sublime-settings"
+                                    "file": "${packages}/User/Indynorm.sublime-settings"
                                 },
                                 "caption": "Settings – User"
                             },
@@ -44,7 +44,7 @@
                                 "caption": "Key Bindings – Default",
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/Normalize Indentation/Default (OSX).sublime-keymap",
+                                    "file": "${packages}/Indynorm/Default (OSX).sublime-keymap",
                                     "platform": "OSX"
                                 }
                             },
@@ -60,7 +60,7 @@
                                 "caption": "Key Bindings – Default",
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/Normalize Indentation/Default (Linux).sublime-keymap",
+                                    "file": "${packages}/Indynorm/Default (Linux).sublime-keymap",
                                     "platform": "Linux"
                                 }
                             },
@@ -76,7 +76,7 @@
                                 "caption": "Key Bindings – Default",
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/Normalize Indentation/Default (Windows).sublime-keymap",
+                                    "file": "${packages}/Indynorm/Default (Windows).sublime-keymap",
                                     "platform": "Windows"
                                 }
                             },

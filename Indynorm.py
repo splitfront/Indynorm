@@ -1,8 +1,8 @@
-import sublime, sublime_plugin, time
+import sublime, sublime_plugin
 
-class NormalizeIndentationCommand(sublime_plugin.TextCommand):
+class IndynormCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        self.log('\n\n\n', '== * == * == * == * ==', 'NormaliseIndentation:')
+        self.log('\n\n\n', '== * == * == * == * ==', 'Indynorm:')
         self.prefs_base = self.get_prefs_base()
         self.prefs_view = self.get_prefs_view()
 
@@ -118,19 +118,19 @@ class NormalizeIndentationCommand(sublime_plugin.TextCommand):
             pass
 
     def log(self, *payload):
-        if sublime.load_settings('Normalize Indentation.sublime-settings').get('debug_mode', False):
+        if sublime.load_settings('Indynorm.sublime-settings').get('debug_mode', False):
             for chunk in payload:
                 print(chunk)
 
-class NormalizeIndentationOnOpen(sublime_plugin.EventListener):
+class IndynormOnOpen(sublime_plugin.EventListener):
 
     def on_load(self, view):
-        settings = sublime.load_settings('Normalize Indentation.sublime-settings')
+        settings = sublime.load_settings('Indynorm.sublime-settings')
         if settings.get('convert_on_open', False): 
-            view.run_command('normalize_indentation')
+            view.run_command('indynorm')
 
     # view gains editing focus
     def on_activated(self, view): 
-        settings = sublime.load_settings('Normalize Indentation.sublime-settings')
+        settings = sublime.load_settings('Indynorm.sublime-settings')
         if settings.get('convert_on_activate', False):
-            view.run_command('normalize_indentation')
+            view.run_command('indynorm')
