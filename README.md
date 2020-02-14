@@ -1,16 +1,5 @@
-# Normalize-Identation
-A Sublime Text plugin to normalize identation for a file.
+# Indynorm
 
-# Install
+An ST3 plugin to fix tabs/spaces indentation in source code.
 
-## Sublime Text 3 Package Control
-
-Install via the package control under https://packagecontrol.io/ . Search for "Normalize Indentation"
-
-## Manual
-
-You can also install it by cloning the repo into your Packages folder, but the installation via Package Control is recommended
-
-## Usage
-
-It's pretty straight forward to use either choose "Tools" -> "Normalize Indentation" or use the shortcut (default Ctrl+Alt+i). There are also options to let it run automatically on load.
+Fork to improve, modernize and refactor abandoned plugin at https://github.com/Ennosuke/Normalize-Indentation
