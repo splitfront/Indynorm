@@ -1,6 +1,6 @@
 {
-    "description": "Unfuck type and size of indentation", 
-    "version": "1.1.0", 
+    "description": "Normalise type and tab_size of open file",
+    "version": "2.0.1", 
     "url": "https://github.com/splitfront/Indynorm", 
     "dependencies": [
         "AutoSetIndentation"

@@ -1,5 +1,4 @@
 {
-    "convert_on_open": false,
-    "convert_on_activate": false,
-    "debug_mode" : true
+    "indynorm_on_load": false,
+    "indynorm_on_activate": false
 }
