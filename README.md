@@ -1,6 +1,6 @@
 # Normalise Indentation mk2
 
-> NB: this is a remake of abandoned [`Normalize Indentation`](https://github.com/Ennosuke/Normalize-Indentation) plugin -- please uninstall it first!
+> NB: this is a remake of abandoned [`Normalize Indentation`](https://github.com/Ennosuke/Normalize-Indentation) plugin — please uninstall it first!
 
 A plugin to normalise indentation of text files according to local preferences. 
 
@@ -10,6 +10,8 @@ Usecase:
 - you're looking at a 4-spaces-per-level tab-indented file;
 - it makes your brain itch;
 - Ctrl+Alt+Shift+I, problem solved.
+
+Features:
 
 - _theoretically_, it should work with ST2, but I will not support it;
 - added support for `*.sublime-syntax` (in addition to venerable `*.tmLanguage`);
