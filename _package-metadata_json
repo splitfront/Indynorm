@@ -1,10 +1,8 @@
 {
-    "description": "Normalise type and tab_size of open file",
+    "description": "Normalise type and tab_size of open file according to your setup",
     "version": "2.0.1", 
     "url": "https://github.com/splitfront/Indynorm", 
-    "dependencies": [
-        "AutoSetIndentation"
-    ], 
+    "dependencies": [], 
     "sublime_text": "*", 
     "platforms": ["*"]
 }
