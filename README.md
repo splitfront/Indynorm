@@ -38,6 +38,7 @@ Before installing this version, __please remove the predecessor__, which doesn't
 - [ ] improve ST UI integration:
     - [ ] move menu item to `View > Indentation`;
     - [ ] add menu item to window's `Spaces/Tabs` menu;
+- [ ] check if AutoSetIndentation has fired `on_load`
 
 
 ## Someday maybe if possible at all
