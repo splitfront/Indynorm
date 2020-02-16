@@ -1,8 +1,8 @@
 import sublime, sublime_plugin
 
-class IndynormCommand(sublime_plugin.TextCommand):
+class NormaliseIndentationCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        self.log('\n\n\n', '== * == * == * == * ==', 'Indynorm: try & normalize indentation!')
+        self.log('\n\n\n', '== * == * == * == * ==', 'Normalise Indentation')
         self.prefs_base = self.get_prefs_base()
         self.prefs_view = self.get_prefs_view()
 
@@ -15,11 +15,11 @@ class IndynormCommand(sublime_plugin.TextCommand):
         if have_spaces:
             if want_spaces:
                 if same_tab_size:
-                    # nothing to do, but in case there are leftover \t's...
+                    # nothing to do, but we gotta deal with leftover mix of \t's and \s's
                     self.log('spaces/spaces/same size -- replace tabs with spaces just in case');
                     self.expand_tabs_to_spaces()
                 else:
-                    # normalize tab width by substition round-trip
+                    # normalize tab width by substition juggle
                     self.log("spaces/spaces/size_mismatch -- fix tab width w/ spaces->tabs->spaces trick")
                     self.collapse_spaces_to_tabs()
                     self.set_tab_size_to_default()
@@ -41,7 +41,7 @@ class IndynormCommand(sublime_plugin.TextCommand):
     def extract_indentation_prefs(self, st_settings):
         result = {}
         for n in ['tab_size', 'translate_tabs_to_spaces']:
-            # we need False values too
+            # we need False values too, thus explicit check
             if st_settings.get(n) != None: 
                 result[n] = st_settings.get(n)
         return result
@@ -63,7 +63,7 @@ class IndynormCommand(sublime_plugin.TextCommand):
         self.log("indentation prefs from " + syntax, prefs_lang)
         prefs_base.update(prefs_lang)
         
-        self.log("indentation preferences (editor & syntax):", prefs_base)
+        self.log("indentation preferences (editor & syntax, merged):", prefs_base)
         return prefs_base
 
     def get_prefs_view(self):
@@ -71,8 +71,8 @@ class IndynormCommand(sublime_plugin.TextCommand):
 
         # The default implementation of detect_lines requires 10 indented lines before it makes a guess
         # on indentation at all, and often make mistakes.
-        # there's a better indent. detector: https://github.com/jfcherng/Sublime-AutoSetIndentation
-        # which hooks into default command,
+        # there's a better indentation detector: https://github.com/jfcherng/Sublime-AutoSetIndentation
+        # which hooks into default command, and you're advised to install if if you're in ST <4050
         self.view.run_command('detect_indentation')
 
         freshly_updated_view_settings = self.view.settings()
@@ -80,7 +80,6 @@ class IndynormCommand(sublime_plugin.TextCommand):
         self.log("indentation preferences for current view:", prefs_view)
         return prefs_view
 
-    ## whitespace manipulation methods
     def collapse_spaces_to_tabs(self):
         self.wait_for_self_view_to_populate()
         self.view.run_command('unexpand_tabs')
@@ -96,23 +95,25 @@ class IndynormCommand(sublime_plugin.TextCommand):
         self.view.settings().set('tab_size', self.prefs_base['tab_size'])
 
     def wait_for_self_view_to_populate(self):
-        # e.g., sometimes self.view == None, we used time.sleep(1) before
+        # e.g., sometimes self.view == None
         while not self.view:
             pass
 
     def log(self, *payload):
-        for chunk in payload:
-            print(chunk)
+        settings = sublime.load_settings('NormaliseIndentation.sublime-settings')
+        if settings.get('enable_logging', False):
+            for chunk in payload:
+                print(chunk)
 
-class IndynormOnOpen(sublime_plugin.EventListener):
+class NormaliseIndentationOnOpen(sublime_plugin.EventListener):
 
     def on_load(self, view):
-        settings = sublime.load_settings('Indynorm.sublime-settings')
-        if settings.get('indynorm_on_load', False): 
-            view.run_command('indynorm')
+        settings = sublime.load_settings('NormaliseIndentation.sublime-settings')
+        if settings.get('normalise_indentation_on_load', False): 
+            view.run_command('normalise_indentation')
 
     # view gains editing focus
     def on_activated(self, view): 
-        settings = sublime.load_settings('Indynorm.sublime-settings')
-        if settings.get('indynorm_on_activate', False):
-            view.run_command('indynorm')
+        settings = sublime.load_settings('NormaliseIndentation.sublime-settings')
+        if settings.get('normalise_indentation_on_activate', False):
+            view.run_command('normalise_indentation')

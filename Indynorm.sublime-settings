@@ -1,4 +1,5 @@
 {
-    "indynorm_on_load": false,
-    "indynorm_on_activate": false
+    "normalise_indentation_on_load": false,
+    "normalise_indentation_on_activate": false,
+    "enable_logging": false
 }

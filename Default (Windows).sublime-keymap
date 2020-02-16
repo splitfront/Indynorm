@@ -1,3 +1,3 @@
 [
-    { "keys": ["ctrl+alt+shift+i"], "command": "indynorm"},
+    { "keys": ["ctrl+alt+shift+i"], "command": "normalise_indentation"},
 ]

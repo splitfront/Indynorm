@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Indynorm",
-        "command": "indynorm"
+        "caption": "Normalise indentation",
+        "command": "normalise_indentation"
     }
 ]
