@@ -73,10 +73,11 @@ class NormaliseIndentationCommand(sublime_plugin.TextCommand):
         # on indentation at all, and often make mistakes.
         # there's a better indentation detector: https://github.com/jfcherng/Sublime-AutoSetIndentation
         # which hooks into default command, and you're advised to install if if you're in ST <4050
-        self.view.run_command('detect_indentation')
+        # self.view.run_command('detect_indentation')
+        view.run_command('auto_set_indentation')
 
-        freshly_updated_view_settings = self.view.settings()
-        prefs_view = self.extract_indentation_prefs(freshly_updated_view_settings)
+        fresh_view_settings = self.view.settings()
+        prefs_view = self.extract_indentation_prefs(fresh_view_settings)
         self.log("indentation preferences for current view:", prefs_view)
         return prefs_view
 
