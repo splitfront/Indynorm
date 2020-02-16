@@ -13,20 +13,15 @@ Usecase:
 
 Features:
 
-- uses robust indentation detector by [`AutoSetIndentation`](https://packagecontrol.io/packages/AutoSetIndentation).
+- robust indentation detector by [`AutoSetIndentation`](https://packagecontrol.io/packages/AutoSetIndentation):
+    - works with short files (less than 10 lines of code);
+    - much smarter with edge cases and weird stuff.
 - supports `*.sublime-syntax` in addition to venerable `*.tmLanguage`;
 - works with mixed space/tab indentation;
 
 ## Compatibility and possible conflicts
 
 Before installing this version, __please remove the predecessor__, which doesn't work with ST3 anyway. To avoid possible collisions, I used `normalise` instead of `normalize` wherever possible (command itself, menu items, names of configuration files &c). 
-
-## Improve indentation auto-detect:
-
-It's not a requirement, but I highly recommend to install [`AutoSetIndentation`](https://packagecontrol.io/packages/AutoSetIndentation):
-
-- it works with short files (less than 10 lines of code);
-- it's smarter with edge cases and weird stuff.
 
 ## Looking into:
 
