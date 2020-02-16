@@ -2,7 +2,7 @@
 
 **Work in progress.** If you got a link for this directly from me, report any bugs and quirks using IM or whatever; if not — open issues.
 
-A plugin to normalise indentation of text files according to local preferences. 
+A plugin to normalise indentation of text files according to your local preferences (including syntax-specific ones).
 
 > NB: this is a complete fork/rewrite of an abandoned [`Normalize Indentation`](https://github.com/Ennosuke/Normalize-Indentation) plugin — please uninstall it first.
 
@@ -20,6 +20,12 @@ Features:
     - much smarter with edge cases and weird stuff.
 - supports `*.sublime-syntax` in addition to venerable `*.tmLanguage`;
 - works with mixed space/tab indentation;
+
+## How does it actually work:
+
+1. AutoSetIndentation does its best to detect indentation settings for current file (tabs or spaces, amount of spaces per tab);
+2. We combine editor's defaults, general user preferences and syntax specific preferences to figure out what kind of indentation user expects to see in such and such type of file;
+3. We convert and adapt file contents so 1 will become 2 in most consistent way possible.
 
 ## Compatibility and possible conflicts
 
