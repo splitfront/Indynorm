@@ -33,17 +33,19 @@ Before installing this version, __please remove the predecessor__, which doesn't
 
 ## TODO:
 
-- [ ] settings from `View > Indentation` shall take precedence over stuff coming from settings files.
-
-## Looking into:
-
-- [ ] more granular control: separate commands to normalise to syntax file defaults and user overrides (including `View > Indentation`?);
-    - [ ] By default, `AutoSetIndentation` works `on_load` — so we can just grab user's selection from `View > Indentation` and presume it is most important?
+- [ ] settings from `View > Indentation` shall take precedence over stuff coming from settings files;
+- [ ] deal with sudden changes in indentation level, e.g. `samples/rails_examples/jump.rb` (walk line by line instead of mass expand/collapse).
 - [ ] improve ST UI integration:
     - [ ] move menu item to `View > Indentation`;
     - [ ] add menu item to window's `Spaces/Tabs` menu;
+
+
+## Someday maybe if possible at all
+
+- [ ] more granular control: separate commands to normalise to syntax file defaults and to user's overrides;
+- [ ] By default, `AutoSetIndentation` works `on_load` — so we can just grab user's selection from `View > Indentation` and presume it is most important?
 - [ ] support per-project and/or per-language preferences (if ST as a platform supports it);
-- [ ] find a way to convert indentation onload withouf polluting diffs:
+- [ ] find a way to normalise indentation without polluting diffs:
     - `on_open` of `./foobar.quux`, detect indentation and store it in `./.~indentation_state_for_foobar_quux`;
     - `.gitignore` for `./~indentation_state_for_*`;
     - `on_commit` hook to revert files to their old indentation settings according to saved state;
