@@ -13,8 +13,9 @@ Usecase:
 
 Features:
 
-- I have added support for `*.sublime-syntax` (in addition to venerable `*.tmLanguage`);
-- now with support for mixed space/tab indentation!
+- uses robust indentation detector by [`AutoSetIndentation`](https://packagecontrol.io/packages/AutoSetIndentation).
+- supports `*.sublime-syntax` in addition to venerable `*.tmLanguage`;
+- works with mixed space/tab indentation;
 
 ## Compatibility and possible conflicts
 
@@ -32,7 +33,6 @@ It's not a requirement, but I highly recommend to install [`AutoSetIndentation`]
 I'm kinda new to ST plugin dev and need to read it's documentation first, but maybe I should:
 
 - [ ] test for compatibility with ST2.
-- [ ] add [`AutoSetIndentation`](https://packagecontrol.io/packages/AutoSetIndentation) as an explicit dependency;
 - [ ] implement "to and fro" conversion (doesn't look like a good idea — needs a git hook and extra lines in `.gitignore`, but maybe):
     - `on_open` of `./foobar.quux`, detect indentation and store it in `./~indentation_state_for_foobar_quux`;
     - `.gitignore` for `./~indentation_state_for_*`;
