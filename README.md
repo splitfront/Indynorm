@@ -29,7 +29,7 @@ I'm kinda new to ST plugin dev and need to read its documentation first, but:
 
 - [ ] test for compatibility with ST2.
 - [ ] implement "to and fro" conversion (doesn't look like a good idea — needs a git hook and extra lines in `.gitignore`, but maybe):
-    - `on_open` of `./foobar.quux`, detect indentation and store it in `./~indentation_state_for_foobar_quux`;
+    - `on_open` of `./foobar.quux`, detect indentation and store it in `./.~indentation_state_for_foobar_quux`;
     - `.gitignore` for `./~indentation_state_for_*`;
     - `on_commit` hook to revert files to their old indentation settings according to saved state;
     - looks a bit baroque, but I often find myself looking at kinds of freaky stuff, yet I don't want to pollute diffs with my quirks.
