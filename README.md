@@ -25,7 +25,7 @@ Before installing this version, __please remove the predecessor__, which doesn't
 
 ## Looking into:
 
-I'm kinda new to ST plugin dev and need to read it's documentation first, but maybe I should:
+I'm kinda new to ST plugin dev and need to read its documentation first, but:
 
 - [ ] test for compatibility with ST2.
 - [ ] implement "to and fro" conversion (doesn't look like a good idea — needs a git hook and extra lines in `.gitignore`, but maybe):
