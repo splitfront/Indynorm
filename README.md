@@ -1,5 +1,7 @@
 # Normalise Indentation mk2
 
+**Work in progress.** If you got a link for this directly from me, report any bugs and quirks using IM or whatever; if not — open issues.
+
 A plugin to normalise indentation of text files according to local preferences. 
 
 > NB: this is a complete fork/rewrite of an abandoned [`Normalize Indentation`](https://github.com/Ennosuke/Normalize-Indentation) plugin — please uninstall it first.
