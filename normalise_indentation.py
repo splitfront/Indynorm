@@ -74,7 +74,7 @@ class NormaliseIndentationCommand(sublime_plugin.TextCommand):
         # there's a better indentation detector: https://github.com/jfcherng/Sublime-AutoSetIndentation
         # which hooks into default command, and you're advised to install if if you're in ST <4050
         # self.view.run_command('detect_indentation')
-        view.run_command('auto_set_indentation')
+        self.view.run_command('auto_set_indentation')
 
         fresh_view_settings = self.view.settings()
         prefs_view = self.extract_indentation_prefs(fresh_view_settings)
