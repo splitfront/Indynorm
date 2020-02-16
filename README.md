@@ -31,20 +31,21 @@ Features:
 
 Before installing this version, __please remove the predecessor__, which doesn't work with ST3 anyway. To avoid possible collisions, I used `normalise` instead of `normalize` wherever possible (command itself, menu items, names of configuration files &c). 
 
+## TODO:
+
+- [ ] settings from `View > Indentation` shall take precedence over stuff coming from settings files.
+
 ## Looking into:
 
-I'm kinda new to ST plugin dev and need to read its documentation first, but:
+I'm kinda new to ST plugin dev and need to read its documentation first, but m.b.:
 
-- [ ] test for compatibility with ST2.
-- [ ] implement "to and fro" conversion (doesn't look like a good idea — needs a git hook and extra lines in `.gitignore`, but maybe):
+- [ ] more granular control: separate commands to normalise to syntax file defaults and user overrides (including `View > Indentation`?);
+- [ ] improve ST UI integration:
+    - [ ] move menu item to `View > Indentation`;
+    - [ ] add menu item to window's `Spaces/Tabs` menu;
+- [ ] support per-project and/or per-language preferences (if ST as a platform supports it);
+- [ ] find a way to convert indentation onload withouf polluting diffs:
     - `on_open` of `./foobar.quux`, detect indentation and store it in `./.~indentation_state_for_foobar_quux`;
     - `.gitignore` for `./~indentation_state_for_*`;
     - `on_commit` hook to revert files to their old indentation settings according to saved state;
     - looks a bit baroque, but I often find myself looking at kinds of freaky stuff, yet I don't want to pollute diffs with my quirks.
-- [ ] add more granular control:
-    - `Ctrl+Alt+I` sets indentation to personal preference;
-    - `Ctrl+Alt+Shift+I` sets it to built-in language standart.
-- [ ] improve ST UI integration:
-    - [ ] move menu item to `View > Indentation`;
-    - [ ] add menu item to window's `Spaces/Tabs` menu;
-- [ ] support per-project \* per-language preferences (if ST as a platform supports it);
