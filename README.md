@@ -37,9 +37,8 @@ Before installing this version, __please remove the predecessor__, which doesn't
 
 ## Looking into:
 
-I'm kinda new to ST plugin dev and need to read its documentation first, but m.b.:
-
 - [ ] more granular control: separate commands to normalise to syntax file defaults and user overrides (including `View > Indentation`?);
+    - [ ] By default, `AutoSetIndentation` works `on_load` — so we can just grab user's selection from `View > Indentation` and presume it is most important?
 - [ ] improve ST UI integration:
     - [ ] move menu item to `View > Indentation`;
     - [ ] add menu item to window's `Spaces/Tabs` menu;
