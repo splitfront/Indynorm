@@ -8,7 +8,6 @@ rm -rf ~/temp/Normalise_Indentation_with_extra_crap
 mkdir -p ~/temp/Normalise_Indentation_with_extra_crap
 cp -r * ~/temp/Normalise_Indentation_with_extra_crap
 
-rm -r ~/temp/Normalise_Indentation_with_extra_crap/samples
 rm ~/temp/Normalise_Indentation_with_extra_crap/Normalise-Indentation.sublime-project
 rm ~/temp/Normalise_Indentation_with_extra_crap/Normalise-Indentation.sublime-workspace
 rm ~/temp/Normalise_Indentation_with_extra_crap/test-build.sh
