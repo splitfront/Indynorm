@@ -1,0 +1,581 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"expand",
+				"expand_tabs"
+			],
+			[
+				"prefs_",
+				"prefs_base"
+			],
+			[
+				"pre",
+				"prefs_view"
+			],
+			[
+				"edit",
+				"editor_settings"
+			],
+			[
+				"_is",
+				"_is_tab_width_mismatched"
+			],
+			[
+				"fix",
+				"fix_tab_size"
+			],
+			[
+				"S",
+				"self"
+			],
+			[
+				"get_re",
+				"get_prefs__merged"
+			],
+			[
+				"get",
+				"get_prefs__syntax"
+			],
+			[
+				"pref",
+				"prefs"
+			],
+			[
+				"p",
+				"prefs"
+			],
+			[
+				"prefs",
+				"prefs_view"
+			],
+			[
+				"mass",
+				"massage_tab_width"
+			],
+			[
+				"s",
+				"src"
+			],
+			[
+				"ex",
+				"extracts"
+			],
+			[
+				"buff",
+				"buff_settings"
+			],
+			[
+				"des",
+				"desired_keys"
+			],
+			[
+				"lang",
+				"lang_settings"
+			],
+			[
+				"tabs",
+				"tabs_to_spaces__tricky"
+			],
+			[
+				"trans",
+				"translate_tabs_to_spaces"
+			],
+			[
+				"extract",
+				"extract_settings"
+			],
+			[
+				"tab",
+				"tab_size"
+			],
+			[
+				"settin",
+				"settings_dict"
+			],
+			[
+				"FILE",
+				"FILE_PATH"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3279,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "normalise_indentation.py",
+			"settings":
+			{
+				"buffer_size": 5976,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test-build.sh",
+			"settings":
+			{
+				"buffer_size": 849,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#!/bin/sh"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"auto",
+				"AutoSetIndentation: Auto Set Indentation"
+			],
+			[
+				"add ",
+				"Package Control: Add Repository"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"add re",
+				"Package Control: Add Repository"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"synt ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ui c",
+				"UI: Select Color Scheme"
+			],
+			[
+				"ui",
+				"UI: Select Color Scheme"
+			],
+			[
+				"ui colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"scheme",
+				"UI: Select Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 292.0,
+		"history":
+		[
+			"print('\\n'*100)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"view.run_command('auto_set_indentation')",
+			"view.run_command('detect_indentation')",
+			"print('\\n'*100)",
+			"view.run_command('funky1')",
+			"view.settings().get(\"detect_indentation\")",
+			"view.run_command('detect_indentation')",
+			"self.view.run_command('detect_indentation')",
+			"print(a)",
+			"print a",
+			"a = 1 if True else False",
+			"a = 1 if false",
+			"a = 1 if false else pass",
+			"print(a)",
+			"print(b)",
+			"a = b = 1",
+			"print(d)",
+			"d['a'] = None",
+			"d = {}",
+			"print(a)",
+			"a, b = [1,2]",
+			"int(False)",
+			"int(True)",
+			"print(False > True)",
+			"print(False < True)",
+			"print(False < False)",
+			"print(False > False)",
+			"print(True > True)",
+			"print(False > True)",
+			"print(False > True))",
+			"print(True > False)",
+			"print({'a':1} == {'a':1})",
+			"print('a', {'a':1})",
+			"print(view.settings().get('foo'))",
+			"view.settings().get('foo')",
+			"print('\\n'*100)",
+			"print(view.settings().get(\"translate_tabs_to_spaces\"))",
+			"self.view()",
+			"settings.get(\"translate_tabs_to_spaces\")",
+			"settings = view.settings()",
+			"settings.get(\"translate_tabs_to_spaces\")",
+			"settings = view.settings()",
+			"settings.get(\"translate_tabs_to_spaces\")",
+			"settings = view.settings()",
+			"clear()",
+			"clean()",
+			"print(view.settings().get('tab_size'))",
+			"print(ts)",
+			"ts = ss.get('tab_size')",
+			"ss.get('tab_size')",
+			"ss",
+			"ss = sublime.load_settings(language + '.sublime-settings')",
+			"print( language )",
+			"language = view.settings().get('syntax').split('/')[-1].replace('.tmLanguage', '').replace('.sublime-syntax', '')",
+			"language = self.view.settings().get('syntax').split('/')[-1].replace('.tmLanguage', '').replace('.sublime-syntax', '')",
+			"print(ts)",
+			"ts = foo.get(\"tab_size\")",
+			"foo = sublime.load_settings('Ruby.sublime-settings')",
+			"print(foo.get('translate_tabs_to_spaces'))",
+			"print(foo.get('tab_size'))",
+			"foo.get('tab_size')",
+			"foo.get('macaroni')",
+			"foo = sublime.load_settings('Python.sublime-settings')",
+			"for a in foo: print a",
+			"for a in foo:",
+			"foo",
+			"foo.list",
+			"foo = sublime.load_settings('Anal.sublime-settings')",
+			"print(sublime.load_settings('Anal.sublime-settings'))",
+			"view.settings().get('syntax') ",
+			"self.view.settings().get('syntax') "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ujin/github/Normalise-Indentation",
+		"/Users/ujin/github/Normalise-Indentation/samples"
+	],
+	"file_history":
+	[
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/User/grab_and_log.py",
+		"/Users/ujin/github/Normalise-Indentation/samples/rails_examples/jump.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/spaces_2.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/spaces_4.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/from_kg/foo.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/from_kg/bar.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/from_kg/application.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/from_kg/backoffice_comment.rb",
+		"/Users/ujin/github/Normalise-Indentation/normalise_indentation.py",
+		"/Users/ujin/github/Normalise-Indentation/README.md",
+		"/Users/ujin/github/Normalise-Indentation/samples/mixed_2spaces.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/mixed_3spaces.rb",
+		"/Users/ujin/github/Normalise-Indentation/samples/mixed.rb",
+		"/Users/ujin/Documents/fuqq_spotify.md",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/Normalise-Indentation/test.rb",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings",
+		"/Users/ujin/.bin/sound_tools.sh",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/Normalize Indentation/package-metadata.json",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/Normalize Indentation/Normalize Indentation.sublime-settings",
+		"/Users/ujin/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/Normalize Indentation.sublime-settings",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/.gitignore",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/Default (Linux).sublime-keymap",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/Default (OSX).sublime-keymap",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/Default (Windows).sublime-keymap",
+		"/Users/ujin/Desktop/Normalize Indentation Alt/normalize_indentation_OLD.py",
+		"/Users/ujin/Desktop/Normalize Indentation/normalize_indentation.py",
+		"/Users/ujin/.path-exports"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1969,
+								1969
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "normalise_indentation.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4725,
+								4725
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 952.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test-build.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								847,
+								847
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+							],
+							"auto_name": "#!/bin/sh",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Normalise-Indentation.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 384.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
