@@ -44,7 +44,7 @@ Before installing this version, __please remove the predecessor__, which doesn't
 
 - [ ] more granular control: separate commands to normalise to syntax file defaults and to user's overrides;
 - [ ] By default, `AutoSetIndentation` works `on_load` — so we can just grab user's selection from `View > Indentation` and presume it is most important?
-- ~~~[x] support per-project and/or per-language preferences (if ST as a platform supports it);~~~
+- [x] support per-project and/or per-language preferences (if ST as a platform supports it);
     - No it doesn't: you can override global _default_ tabsize and that's it.
 - [ ] find a way to normalise indentation without polluting diffs:
     - `on_open` of `./foobar.quux`, detect indentation and store it in `./.~indentation_state_for_foobar_quux`;
