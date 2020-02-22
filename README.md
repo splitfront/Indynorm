@@ -1,8 +1,10 @@
+> /!\\ This is a **work in progress**.  
+> If you got a link for this directly from me, report any bugs and quirks using IM or whatever; if not — open issues.
+
+
 # Normalise Indentation mk2
 
 A plugin to normalise indentation of text files according to your local preferences (including syntax-specific ones).
-
-> This is a **work in progress**. If you got a link for this directly from me, report any bugs and quirks using IM or whatever; if not — open issues.
 
 > NB: started as a fork of an abandoned [`Normalize Indentation`](https://github.com/Ennosuke/Normalize-Indentation) plugin, then completely rewrote it — please uninstall old one first, it doesn't work anyway.
 
@@ -29,7 +31,7 @@ How does it actually work:
 
 ## Compatibility and possible conflicts
 
-Before installing this version, __please remove the predecessor__, which doesn't work with ST3 anyway. To avoid possible collisions, I used `normalise` instead of `normalize` wherever possible (command itself, menu items, names of configuration files &c). 
+Before installing this version, __please remove the [predecessor](https://github.com/Ennosuke/Normalize-Indentation)__, which doesn't work with ST3 anyway. To avoid possible collisions, I used `normalise` instead of `normalize` wherever possible (command itself, menu items, names of configuration files &c). 
 
 ## TODO:
 
