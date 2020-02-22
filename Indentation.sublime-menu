@@ -1,0 +1,8 @@
+[
+    // you can add stuff to footer's "Indentation" menu, but you shouldn't
+    // { "caption" : "-" },
+    // {
+    //     "caption": "Normalise indentation",
+    //     "command": "normalise_indentation",
+    // }
+]
