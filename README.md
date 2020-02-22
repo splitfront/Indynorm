@@ -36,11 +36,12 @@ Before installing this version, __please remove the [predecessor](https://github
 ## TODO:
 
 - [ ] settings from `View > Indentation` shall take precedence over stuff coming from settings files;
-- [ ] deal with sudden changes in indentation level, e.g. `samples/rails_examples/jump.rb` (walk line by line instead of mass expand/collapse).
+- [ ] deal with sudden changes in indentation level, e.g. `samples/rails_examples/jump.rb` (walk line by line instead of mass expand/collapse);
 - [ ] improve ST UI integration:
     - [ ] move menu item to `View > Indentation`;
-    - [ ] add menu item to window's `Spaces/Tabs` menu;
-- [ ] check if AutoSetIndentation has fired `on_load`
+    - [ ] ~~add menu item to window's "Indentatin" menu~~;
+        - bad idea, `Default.sublime-package/Indentation.sublime_menu` declared sacred by developers — you better not mess with it;
+- [ ] check if AutoSetIndentation has fired `on_load`?.
 
 ## Someday maybe if possible at all
 
