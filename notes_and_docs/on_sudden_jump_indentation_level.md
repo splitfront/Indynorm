@@ -49,7 +49,7 @@ if (foo
 
 Another sample:
 
-```shellscript
+```shell
 mycommand --option_a --option_b
 ...,...,...,...,...,...,--option_c 41
 ...,...,...,...,...,...,--option_d "foo"
@@ -58,7 +58,7 @@ mycommand --option_a --option_b
 
 Then we to 8-spaces-per-actual-tab and it doesn't look nice at all:
 
-```sh
+```shell
 mycommand --option_a --option_b
 \t      \t      \t      \t      \t      \t      --option_c 41
 \t      \t      \t      \t      \t      \t      --option_d "foo"
