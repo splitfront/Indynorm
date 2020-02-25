@@ -14,11 +14,11 @@ E.g., we have a snippet of JS indented with spaces, 4 per level:
 
 ```javascript
 if (foo 
-............&& bar
-............&& quux || zot ) {
-....bring_it_on();
+...,...,...,&& bar
+...,...,...,&& quux || zot ) {
+...,bring_it_on();
 } else {
-....slack_off();
+...,slack_off();
 }
 ```
 
@@ -45,4 +45,22 @@ if (foo
 } else {
 \t      slack_off();
 }
+```
+
+Another sample:
+
+```shellscript
+mycommand --option_a --option_b
+...,...,...,...,...,...,--option_c 41
+...,...,...,...,...,...,--option_d "foo"
+...,...,...,...,...,...,file.*
+```
+
+Then we to 8-spaces-per-actual-tab and it doesn't look nice at all:
+
+```sh
+mycommand --option_a --option_b
+\t      \t      \t      \t      \t      \t      --option_c 41
+\t      \t      \t      \t      \t      \t      --option_d "foo"
+\t      \t      \t      \t      \t      \t      file.*
 ```
