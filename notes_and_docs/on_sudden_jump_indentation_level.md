@@ -12,37 +12,37 @@ Instead of just collapsing sequences of spaces to tab symbols _globally_, we:
 
 E.g., we have a snippet of JS indented with spaces, 4 per level:
 
-```
-001|if (foo 
-002|............&& bar
-003|............&& quux || zot ) {
-004|....bring_it_on();
-005|} else {
-006|....slack_off();
-007|}
+```javascript
+if (foo 
+............&& bar
+............&& quux || zot ) {
+....bring_it_on();
+} else {
+....slack_off();
+}
 ```
 
 After we convert it to tab-indented with 4 tabs per level, it will become this:
 
-```
-001|if (foo 
-002|\t  \t  \t  && bar
-003|\t  \t  \t  && quux || zot ) {
-004|\t  tbring_it_on();
-005|} else {
-006|\t  slack_off();
-007|}
+```javascript
+if (foo 
+\t  \t  \t  && bar
+\t  \t  \t  && quux || zot ) {
+\t  tbring_it_on();
+} else {
+\t  slack_off();
+}
 ```
 
 Problems start when we try to go from "spaces, 4/level" to "tabs, 8/level"
 (notice huge shift to the right on lines 2 & 3):
 
-```
-001|if (foo 
-002|\t      \t      \t      && bar
-003|\t      \t      \t      && quux || zot ) {
-004|\t      bring_it_on();
-005|} else {
-006|\t      slack_off();
-007|}
+```javascript
+if (foo 
+\t      \t      \t      && bar
+\t      \t      \t      && quux || zot ) {
+\t      bring_it_on();
+} else {
+\t      slack_off();
+}
 ```
