@@ -86,6 +86,9 @@ class NormaliseIndentationCommand(sublime_plugin.TextCommand):
         self.view.run_command('unexpand_tabs')
         self.view.settings().set('translate_tabs_to_spaces', False)
 
+    def collapse_spaces_to_tabs_line_by_line(self):
+        pass
+
     def expand_tabs_to_spaces(self):
         self.wait_for_self_view_to_populate()
         self.view.run_command('expand_tabs')
