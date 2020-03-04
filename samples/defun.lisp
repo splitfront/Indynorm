@@ -1,0 +1,6 @@
+(defun factorial (n)
+	(let ((m 1))
+		(loop while (> n 0)
+					do (setf m (* m n))
+						 (decf n))
+		m))
