@@ -1,15 +1,5 @@
 # What to do with hard-wrapped lines and logical indentation in non-py files?
 
-Instead of just collapsing sequences of spaces to tab symbols _globally_, we:
-
-- process file line by line;
-- watch for sudden indentation jumps:
-    - OK: 1 level, 2 levels, 3 levels
-    - WEIRD: 1 level, 4 levels, 3 levels
-- we keep track of last non-weird indentation level
-- for "weird" lines, we calculate amount of leading whitespace required
-  for keeping relative left margin as close as possible to original.
-
 E.g., we have a snippet of JS indented with spaces, 4 per level:
 
 ```javascript
