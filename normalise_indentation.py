@@ -86,8 +86,101 @@ class NormaliseIndentationCommand(sublime_plugin.TextCommand):
         self.view.run_command('unexpand_tabs')
         self.view.settings().set('translate_tabs_to_spaces', False)
 
-    def collapse_spaces_to_tabs_line_by_line(self):
-        pass
+    def collapse_spaces_to_tabs_line_by_line(self, tab_size__old, tab_size__new):
+        """
+        Instead of just collapsing sequences of spaces to tab symbols _globally_, we:
+
+        - process file line by line;
+        - watch for sudden indentation jumps:
+            - OK: 1 level, 2 levels, 3 levels
+            - WEIRD: 1 level, 4 levels, 3 levels
+        - we keep track of last non-weird indentation level
+        - for "weird" lines, we calculate amount of leading whitespace required
+          for keeping relative left margin as close as possible to original.
+        """
+
+        def reindent_basic(line):
+            tabsize = line["tab_size__new"]
+            lvl = line["level"]
+            whitespaceless = line["stripped"]
+            return (" " * tabsize * level) + whitespaceless
+
+        def reindent_tricky(line):
+            return line
+
+        def parse_indentation(raw_line, tab_size__old, tab_size__new):
+            """
+            to properly reindent every line we need some info
+            about indentation of it's predecessor
+            """
+            detabbed = raw_line.replace("\t", " " * tab_size_old)
+            stripped = raw_line.lstrip()
+            spaces = len(detabbed) - len(stripped)
+            return {
+                "tab_size__old" : tab_size__old,
+                "tab_size__new" : tab_size__new,
+                "raw"           : raw_line,
+                "detabbed"      : detabbed,
+                "stripped"      : stripped,
+                "level__abs"    : spaces,
+                "level"         : spaces // tab_size__old,
+                "padding"       : spaces % tab_size__old,
+                "reindent_with" : None
+                }
+
+        def reindent_line(line, line_above):
+            """
+            - TODO: cash calculated reindentations and use them instead of recalculating
+            """
+            tab_in_whitespaces = " " * line["tab_size__new"]
+            do_shallow_step = lambda : line["level"] * tab_in_whitespaces
+            do_same_level_as_line_above = lambda : line_above["reindent_with"]
+
+            def do_deep_step():
+                """
+                here be recalculation of shit
+                AAAAAAAAAAAAAAAAAAAAAAAAAA!!!
+                - for "weird" lines, we calculate amount of leading whitespace required
+                  for keeping relative left margin as close as possible to original.
+                """
+                pass
+
+            if line_above == None:
+                # 1st line "normally indented" by definition
+                reindent_with = do_shallow_step()
+            elif line["level__abs"] == line_above["level__abs"]:
+                # same level, totally
+                reindent_with = do_same_level_as_line_above()
+            else:
+                level_diff = line["level"] - line_above["level"]
+                if level_diff < 2:
+                    # negatives are out-denting
+                    reindent_with = do_shallow_step()
+                else:
+                    # dramatic jump! someone escaped newlines, lined up
+                    #                           shit in consequent lines,
+                    # and got way too much creative!
+                    reindent_with = do_deep_step()
+                    
+
+            line["reindent_with"] = reindent_with
+            reindented_line = reindent_with + line["stripped"]
+            return reindented_line
+
+        self.wait_for_self_view_to_populate()
+        
+        # -- tabs->spaces->tabs to deal with in-line "formatting" tabs
+        # 1st line of view has None as description of previous line. LOGIKA.
+        whole_view = sublime.Region(0, view.size())
+        view_content = self.view.substr(whole_view)
+
+        lines__raw = view_content.splitlines()
+        lines__parsed = [parse_indentation(l, tab_size__old, tab_size__new) for l in raw_lines]
+        lines__reindented = [reindent_line(l, p) for l, p in zip(lines__parsed, [None] + lines__parsed)]
+
+        # -- 1. join reindented lines with view's line end symbol
+        # -- 2. replace content
+        # -- 3. restore selection
 
     def expand_tabs_to_spaces(self):
         self.wait_for_self_view_to_populate()
